@@ -3,12 +3,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import img from "../assists/img.jpg"
+import img2 from "../assists/img2.jpg"
+import img3 from "../assists/img3.jpg"
 
 export default function AboutPage() {
   const teamMembers = [
-    { name: "John Doe", role: "CEO", image: "/placeholder.svg?height=100&width=100" },
-    { name: "Jane Smith", role: "CTO", image: "/placeholder.svg?height=100&width=100" },
-    { name: "Mike Johnson", role: "Lead Developer", image: "/placeholder.svg?height=100&width=100" },
+    { name: "ALI ALMURTADHA BASHEER JASIM", role: "GENERAL MANAGER", image: img },
+    { name: "MOHAMAD MAHMOUD KAYAL", role: "ACCOUNTING MANAGER", image: img2 },
+    { name: "HAYDER MANSOOR ABBAS AL ARBAWEE", role: "HUMAN RESOURCES MANAGER", image: img3 },
   ]
 
   return (
@@ -23,12 +26,11 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent>
             <p className="text-lg mb-6">
-              Welcome to our company! We are a passionate team of professionals dedicated to creating innovative solutions that make a difference in people's lives. Our mission is to leverage cutting-edge technology to solve real-world problems and drive positive change in various industries.
+              Welcome to our company! We are a passionate team of professionals dedicated to creating innovative solutions that make a difference in people's lives. Our mission is to benefit from products to solve real-world problems and drive positive change in various industries.
             </p>
             <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
             <p className="mb-6">
-              We envision a world where technology empowers individuals and businesses to reach their full potential. Through our products and services, we aim to simplify complex processes, enhance productivity, and foster creativity across diverse sectors.
-            </p>
+            We envision a world where the productivity of individuals and companies can reach their full potential. Through our products and services, we aim to streamline complex processes, enhance productivity, and foster creativity across diverse sectors.            </p>
             <h2 className="text-2xl font-semibold mb-4">Our Values</h2>
             <div className="flex flex-wrap gap-2 mb-6">
               <Badge variant="secondary">Innovation</Badge>
@@ -47,15 +49,25 @@ export default function AboutPage() {
                       <AvatarImage src={member.image} alt={member.name} />
                       <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                     </Avatar>
-                    <h3 className="font-semibold text-lg">{member.name}</h3>
+                    <h3 className="font-semibold " style={{fontSize:"11px"}}>{member.name}</h3>
                     <p className="text-sm text-gray-500">{member.role}</p>
+
                   </CardContent>
+                  
                 </Card>
+
               ))}
+            
             </div>
-            <div className="mt-8 text-center">
-              <Button>Join Our Team</Button>
-            </div>
+            <hr/> 
+            <h2 className=" mt-7 text-2xl font-semibold mb-4">connect with us</h2>
+
+<div className="flex flex-wrap gap-2 mb-6">
+<Badge variant="secondary">+971 58 583 2200</Badge>
+<Badge variant="secondary">+97142505944</Badge>
+<Badge variant="secondary">sales@jbalalryah.com</Badge>
+<Badge variant="secondary">hr@jbalalryah.com</Badge>
+ </div>
           </CardContent>
         </Card>
       </div>

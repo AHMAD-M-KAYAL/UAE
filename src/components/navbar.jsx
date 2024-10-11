@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
-import img1 from "../assists/myphoto.jpg"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+// import img1 from "../assists/myphoto.jpg"
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuLabel,
+//   DropdownMenuSeparator,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Search, User } from 'lucide-react'
@@ -20,8 +20,7 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Products', href: '/services' },
   ]
 
   return (
@@ -52,13 +51,8 @@ export default function Navbar() {
             <div className="ml-4 flex items-center md:ml-6">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Search className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                </div>
-                <Input
-                  type="text"
-                  placeholder="Search"
-                  className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-gray-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
-                />
+                 </div>
+ 
               </div>
               
             </div>

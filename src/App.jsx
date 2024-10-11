@@ -4,21 +4,17 @@ import { Button } from "@/components/ui/button"
 import AboutPage from './components/about'
 import ProductsPage from './components/proudct'
 import HomePage from './components/home'
-import { BrowserRouter,Route,Routes } from "react-router-dom";
+ import { BrowserRouter,Route,Routes } from "react-router-dom";
  function App() {
-
-
   return (
 <>
 <Navbar/>
- 
       <Routes>
-        <Route path="/" element={<HomePage/>} /> {/* 👈 Renders at /app/ */}
-        <Route path="/about" element={<AboutPage/>} /> {/* 👈 Renders at /app/ */}
-        <Route path="/services" element={<ProductsPage/>} /> {/* 👈 Renders at /app/ */}
+        <Route path="/" element={<HomePage/>} />  
+        <Route path="/about" element={<AboutPage/>} /> 
+        <Route path="/services" element={<ProductsPage/>} /> 
 
-      </Routes>
-     </>
+      </Routes></>
   )
 }
 
