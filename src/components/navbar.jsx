@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
                 <div className="text-gray-600  font-medium">
-                    JABAL ALRAYAH
+                    JABAL ALRYAH
                 </div>
             </Link>
             <div className="hidden md:block">

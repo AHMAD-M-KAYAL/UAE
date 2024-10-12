@@ -36,7 +36,7 @@ export default function HomePage() {
         <div className="container mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4"> JABAL ALRYAH </h1>
 
-          <h3 className="text-3xl  mb-4">Welcome to Our Amazing Product</h3>
+          <h3 className="text-3xl  mb-4">Welcome to Our Amazing Product ahmad</h3>
           <p className="text-xl mb-8">Revolutionize your workflow with our cutting-edge solution</p>
           <Button size="lg">
             <Link to={"/services"}>Get Started</Link>

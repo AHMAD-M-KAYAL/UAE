@@ -61,11 +61,60 @@ export default function Mix () {
   )
 
   return (
-   <> <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+   <> 
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0 md:space-x-4">
+          <Input
+            className="max-w-sm"
+            type="text"
+            placeholder="Search products..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <Select value={category} onValueChange={setCategory}>
+            <SelectTrigger className="max-w-[180px]">
+              <SelectValue placeholder="Category" />
+            </SelectTrigger>
+            <SelectContent>
+              {/* <SelectItem value="">All Categories</SelectItem> */}
+              <SelectItem value="shoemaker">shoemaker</SelectItem>
+              <SelectItem value="t-shirt">t-shirt</SelectItem>
+              <SelectItem value="perfume">perfume</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProducts.map(product => (
+            <Card key={product.id}>
+              <CardHeader>
+                <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded-md" />
+                <CardTitle>{product.name}</CardTitle>
+                <CardDescription>
+                  <Badge variant="secondary">{product.category}</Badge>
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {/* <p className="text-2xl font-bold">${product.price.toFixed(2)}</p> */}
+              </CardContent>
+              <CardFooter className="flex justify-between">
+                <Button variant="outline">View Details</Button>
+                <Button>Add to Cart</Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+        {filteredProducts.length === 0 && (
+          <p className="text-center text-gray-500 mt-8">No products found matching your criteria.</p>
+        )}
+      </div>
+    </div>
+   <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle className="text-3xl font-bold text-center">About Our Company</CardTitle>
+            <CardTitle className="text-3xl font-bold text-center">About us</CardTitle>
             <CardDescription className="text-center mt-2">
               Innovating for a better tomorrow
             </CardDescription>
@@ -119,53 +168,7 @@ export default function Mix () {
       </div>
     </div>
  
- <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
-        <div className="flex flex-col md:flex-row justify-between items-center mb-6 space-y-4 md:space-y-0 md:space-x-4">
-          <Input
-            className="max-w-sm"
-            type="text"
-            placeholder="Search products..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <Select value={category} onValueChange={setCategory}>
-            <SelectTrigger className="max-w-[180px]">
-              <SelectValue placeholder="Category" />
-            </SelectTrigger>
-            <SelectContent>
-              {/* <SelectItem value="">All Categories</SelectItem> */}
-              <SelectItem value="shoemaker">shoemaker</SelectItem>
-              <SelectItem value="t-shirt">t-shirt</SelectItem>
-              <SelectItem value="perfume">perfume</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProducts.map(product => (
-            <Card key={product.id}>
-              <CardHeader>
-                <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded-md" />
-                <CardTitle>{product.name}</CardTitle>
-                <CardDescription>
-                  <Badge variant="secondary">{product.category}</Badge>
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                {/* <p className="text-2xl font-bold">${product.price.toFixed(2)}</p> */}
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant="outline">View Details</Button>
-                <Button>Add to Cart</Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-        {filteredProducts.length === 0 && (
-          <p className="text-center text-gray-500 mt-8">No products found matching your criteria.</p>
-        )}
-      </div>
-    </div></>
+
+    </>
 )
 }
