@@ -6,7 +6,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Link } from 'react-router-dom'
 import ProductsPage from './proudct'
 import AboutPage from './about'
-import Mix from './mix'
 export default function HomePage() {
   const [email, setEmail] = useState('')
 

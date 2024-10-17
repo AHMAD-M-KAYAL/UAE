@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import c1 from "../assists/c1.jpeg"
-import c2 from "../assists/c2.jpeg"
-import c3 from "../assists/c3.jpeg"
-import c4 from "../assists/c4.jpeg"
-import c5 from "../assists/c5.jpeg"
+import c1 from "../assists/c1.jpg"
+import c2 from "../assists/c2.jpg"
+import c3 from "../assists/c3.jpg"
+import c4 from "../assists/c4.jpg"
+import c5 from "../assists/c5.jpg"
 import t1 from "../assists/T1.jpeg"
 import t2 from "../assists/th.jpeg"
 import t3 from "../assists/T3.jpeg"
@@ -95,7 +95,7 @@ export default function ProductsPage() {
           {filteredProducts.map(product => (
             <Card key={product.id}>
               <CardHeader>
-                <img src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded-md" />
+                <img style={{width:"400px",height:"300px"}} src={product.image} alt={product.name} className="w-full h-48 object-cover mb-4 rounded-md" />
                 <CardTitle>{product.name}</CardTitle>
                 <CardDescription>
                   <Badge variant="secondary">{product.category}</Badge>
@@ -124,7 +124,7 @@ export default function ProductsPage() {
           <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
               <h2 className="text-2xl font-bold mb-4">{selectedProduct.name}</h2>
-              <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-48 object-cover mb-4 rounded-md" />
+              <img style={{width:"400px",height:"300px"}} src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-48 object-cover mb-4 rounded-md" />
               <p className="text-xl font-semibold">${selectedProduct.price.toFixed(2)}</p>
               <p className="text-gray-500 mt-2">Category: {selectedProduct.category}</p>
               <Button variant="outline" onClick={closeModal} className="mt-6">Close</Button>
