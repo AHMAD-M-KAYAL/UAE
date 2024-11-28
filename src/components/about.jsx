@@ -65,8 +65,11 @@ export default function AboutPage() {
 <div className="flex flex-wrap gap-2 mb-6">
 <Badge variant="secondary">+971 58 583 2200</Badge>
 <Badge variant="secondary">+97142505944</Badge>
-<Badge variant="secondary">sales@jbalalryah.com</Badge>
-<Badge variant="secondary">hr@jbalalryah.com</Badge>
+<Badge variant="secondary">office@albytalzakhr.com</Badge>
+<Badge variant="secondary">info@albytalzakhr.com</Badge>
+<Badge variant="secondary">hr@albytalzakhr.com</Badge>
+<Badge variant="secondary">sales@albytalzakhr.com</Badge>
+
  </div>
           </CardContent>
         </Card>
