@@ -73,6 +73,8 @@ export default function AboutPage() {
  </div>
 
 <div className="flex flex-wrap gap-2 mb-6">
+<h2 className=" mt-7 text-2xl font-semibold mb-4">Location</h2>
+
 <Badge variant="secondary">Office Location: UAE - Dubai - Al Murar - 24 8th St - Alhasmi Building - Office Num108</Badge>
 
  </div>
