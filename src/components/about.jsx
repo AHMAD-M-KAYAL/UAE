@@ -60,15 +60,17 @@ export default function AboutPage() {
             
             </div>
             <hr/> 
-            <h2 className=" mt-7 text-2xl font-semibold mb-4">connect with us</h2>
-
-<div className="flex gap-2 mb-6">
+<h2 className=" mt-7 text-2xl font-semibold mb-4">connect with us</h2>
+<div className="flex flex-wrap gap-2 mb-6">
 <Badge variant="secondary">+971585598100</Badge>
 <Badge variant="secondary">+97142505944</Badge>
+<hr/>
 <Badge variant="secondary">office@albytalzakhr.com</Badge>
 <Badge variant="secondary">info@albytalzakhr.com</Badge>
+<he/>
 <Badge variant="secondary">sales@albytalzakhr.com</Badge>
 <Badge variant="secondary">hr@albytalzakhr.com</Badge>
+<hr/>
  </div>
           </CardContent>
         </Card>
