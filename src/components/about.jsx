@@ -68,7 +68,7 @@ export default function AboutPage() {
 <br/>
 <Badge variant="secondary">office@albytalzakhr.com</Badge>
 <Badge variant="secondary">info@albytalzakhr.com</Badge>
-<br/>
+
 <Badge variant="secondary">sales@albytalzakhr.com</Badge>
 <Badge variant="secondary">hr@albytalzakhr.com</Badge>
 
